@@ -10,7 +10,7 @@ interface LoginSlice {
 const initialState: LoginSlice = {
 	username: 'admin',
 	password: 'admin',
-	isLoggedIn: false,
+	isLoggedIn: true,
 	avatar: require('../../images/Avatar.png')
 }
 
