@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../app/hooks'
 import { login, logout } from '../features/login/loginSlice'
+import Avatar from '../images/Avatar.png'
 
 interface IWrapperProps {
 	children: React.ReactNode
@@ -62,7 +63,7 @@ const Wrapper: React.FunctionComponent<IWrapperProps> = ({ children }) => {
 								<Link to={'/createarticle'}>Create Article</Link>
 								<img
 									className={'w-[32px] h-[32px] hover:cursor-pointer'}
-									src={loginData.avatar}
+									src={Avatar}
 									alt='avatar'
 									onClick={() => setModal((prevState) => !prevState)}
 								/>

@@ -6,6 +6,8 @@ import RelatedArticle from './RelatedArticle'
 import Paragraph from './Paragraph'
 import Wrapper from './Wrapper'
 
+import Img from '../images/img.jpg'
+
 interface IPostDetailedProps {}
 
 const PostDetailed: React.FunctionComponent<IPostDetailedProps> = ({}) => {
@@ -19,7 +21,7 @@ const PostDetailed: React.FunctionComponent<IPostDetailedProps> = ({}) => {
 							<span className={'text-gray-500'}>Author</span>
 							<span className={'text-gray-500'}>12.4.2019</span>
 						</div>
-						<img className={'w-full h-[504px] mb-[24px] object-cover'} src={require('../images/img.jpg')} alt='image' />
+						<img className={'w-full h-[504px] mb-[24px] object-cover'} src={Img} alt='image' />
 						<div>
 							<Paragraph>
 								Men might grow a beard or maintain a mustache just for extra style points, but the facial hair of the cat has nothing to do

@@ -1,11 +1,13 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+
 module.exports = {
 	mode: 'development',
-	entry: './src/index.tsx',
 	devtool: 'inline-source-map',
+	entry: path.resolve(__dirname, '..', './src/index.tsx'),
 	output: {
-		path: path.join(__dirname, '/dist'),
+		path: path.join(__dirname, '..', '/dist'),
 		filename: 'bundle.js'
 	},
 	devServer: {
@@ -16,14 +18,28 @@ module.exports = {
 			{
 				test: /\.(ts|js)x?$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader',
 				use: [{ loader: 'babel-loader' }]
+			},
+			{
+				test: /\.css$/,
+				use: ['style-loader', 'css-loader', 'postcss-loader']
+			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 8192
+						}
+					}
+				],
+				type: 'javascript/auto'
+			},
+			{
+				test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+				type: 'asset/inline'
 			}
-			// {
-			// 	test: /\.tsx?$/,
-			// 	use: 'ts-loader',
-			// 	exclude: /node_modules/
-			// }
 		]
 	},
 	resolve: {
@@ -31,7 +47,8 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './public/index.html'
-		})
+			template: path.resolve(__dirname, '..', '/public/index.html')
+		}),
+		new ReactRefreshPlugin()
 	]
 }
