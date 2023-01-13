@@ -11,7 +11,7 @@ const initialState: LoginSlice = {
 	username: 'admin',
 	password: 'admin',
 	isLoggedIn: true,
-	avatar: require('../../images/Avatar.png')
+	avatar: require('../../images/avatars/Avatar.png')
 }
 
 export const loginSlice = createSlice({

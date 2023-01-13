@@ -9,6 +9,7 @@ import MyArticles from './components/MyArticles'
 import CreateArticlePage from './components/CreateArticlePage'
 import { Provider } from 'react-redux'
 import { store } from './app/store'
+import SinglePage from './components/SinglePage'
 
 const router = createBrowserRouter([
 	{
@@ -16,9 +17,14 @@ const router = createBrowserRouter([
 		element: <App />
 	},
 	{
-		path: '/detail',
+		path: '/:id',
+		element: <SinglePage />
+	},
+	{
+		path: '/articles/:articleId',
 		element: <PostDetailed />
 	},
+
 	{
 		path: '/myarticles',
 		element: <MyArticles />
@@ -34,9 +40,6 @@ root.render(
 	<React.StrictMode>
 		<Provider store={store}>
 			<RouterProvider router={router} />
-			{/*<Wrapper>*/}
-			{/*	<RouterProvider router={router} />*/}
-			{/*</Wrapper>*/}
 		</Provider>
 	</React.StrictMode>
 )

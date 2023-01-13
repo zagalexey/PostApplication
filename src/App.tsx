@@ -39,18 +39,15 @@ function App() {
 						{/*<button onClick={() => dispatch(getPosts())}>fetch posts</button>*/}
 						{articles.inPending && <h1>Articles are loading...</h1>}
 						{articles.articlesRejected && <h1>Some error happened</h1>}
-						{articles.articles.items.length > 0 ? (
-							articles.articles.items.map((article) => (
-								<Post key={article.articleId} title={article.title} perex={article.perex} createdAt={article.createdAt} />
-							))
+
+						{articles.articles.length ? (
+							Array.from(articles.articles).map((article: any) => <Post key={article.articleId} article={article} />)
 						) : (
-							<></>
+							<>
+								<h1>No Data!</h1>
+							</>
 						)}
-						{/*<p>{JSON.stringify(articles.articles.items)}</p>*/}
-						{/*<button onClick={postCommentHandler}>Post comment</button>*/}
-						{/*<Post />*/}
-						{/*<Post />*/}
-						{/*<Post />*/}
+						{/*<button onClick={() => dispatch(postComment())}>Post comment</button>*/}
 					</PostsWrapper>
 				</div>
 			)}

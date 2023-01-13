@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../app/hooks'
-import { login, logout } from '../features/login/loginSlice'
-import Avatar from '../images/Avatar.png'
+import { logout } from '../features/login/loginSlice'
+
+import Avatar from '../images/avatars/Avatar.png'
 
 interface IWrapperProps {
 	children: React.ReactNode
@@ -36,8 +37,16 @@ const Wrapper: React.FunctionComponent<IWrapperProps> = ({ children }) => {
 								>
 									<rect width='39' height='44' fill='url(#pattern0)' />
 									<defs>
-										<pattern id='pattern0' patternContentUnits='objectBoundingBox' width='1' height='1'>
-											<use xlinkHref='#image0_10989_625' transform='translate(0 -0.000258264) scale(0.00757576 0.00671488)' />
+										<pattern
+											id='pattern0'
+											patternContentUnits='objectBoundingBox'
+											width='1'
+											height='1'
+										>
+											<use
+												xlinkHref='#image0_10989_625'
+												transform='translate(0 -0.000258264) scale(0.00757576 0.00671488)'
+											/>
 										</pattern>
 										<image
 											id='image0_10989_625'
@@ -78,7 +87,14 @@ const Wrapper: React.FunctionComponent<IWrapperProps> = ({ children }) => {
 						) : (
 							<div className={'flex items-center gap-2 text-blue-500'}>
 								Log in
-								<svg className={'text-blue-500'} width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
+								<svg
+									className={'text-blue-500'}
+									width='14'
+									height='10'
+									viewBox='0 0 14 10'
+									fill='none'
+									xmlns='http://www.w3.org/2000/svg'
+								>
 									<path
 										fill-rule='evenodd'
 										clip-rule='evenodd'

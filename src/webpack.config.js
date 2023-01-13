@@ -8,10 +8,12 @@ module.exports = {
 	entry: path.resolve(__dirname, '..', './src/index.tsx'),
 	output: {
 		path: path.join(__dirname, '..', '/dist'),
-		filename: 'bundle.js'
+		filename: 'bundle.js',
+		publicPath: '/'
 	},
 	devServer: {
-		static: './dist'
+		static: './dist',
+		historyApiFallback: true
 	},
 	module: {
 		rules: [
@@ -26,15 +28,7 @@ module.exports = {
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
-				use: [
-					{
-						loader: 'url-loader',
-						options: {
-							limit: 8192
-						}
-					}
-				],
-				type: 'javascript/auto'
+				type: 'asset/resource'
 			},
 			{
 				test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
