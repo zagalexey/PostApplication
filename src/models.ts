@@ -29,9 +29,10 @@ export interface IArticle {
 	id: number
 	title: string
 	perex: string
-	imageId: null | string
+	imageUrl: null | string
 	createdAt: string
 	lastUpdatedAt: string
 	content: string
+	author: string
 	comments: Array<IComment>
 }

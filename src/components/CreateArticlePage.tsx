@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { FormEvent, useState } from 'react'
 import Wrapper from './Wrapper'
 import ActionButton from './ActionButton'
+import axios from 'axios'
+// import { marked } from 'marked'
+import Markdown from 'marked-react'
+import Paragraph from './Paragraph'
 
 interface ICreateArticlePageProps {}
 
@@ -16,7 +20,12 @@ const CreateArticlePage: React.FunctionComponent<ICreateArticlePageProps> = ({})
 					<label className={'font-bold'} htmlFor={'title'}>
 						Article Title
 					</label>
-					<input id={'title'} className={'border rounded h-[46px] px-2 mt-[8px]'} type='text' placeholder={'My First Article'} />
+					<input
+						id={'title'}
+						className={'border rounded h-[46px] px-2 mt-[8px]'}
+						type='text'
+						placeholder={'My First Article'}
+					/>
 					<label className={'mt-[32px] font-bold'} htmlFor={'imageUpload'}>
 						Featured image
 					</label>
@@ -24,7 +33,13 @@ const CreateArticlePage: React.FunctionComponent<ICreateArticlePageProps> = ({})
 					<label className={'mt-[32px] font-bold'} htmlFor={'content'}>
 						Content
 					</label>
-					<textarea id={'content'} className={'w-full border rounded mt-[8px]'} rows={20} placeholder={'Supports markdown. Yay!'}></textarea>
+					<textarea
+						id={'content'}
+						className={'w-full border rounded mt-[8px]'}
+						rows={20}
+						placeholder={'Supports markdown. Yay!'}
+					></textarea>
+					<button type={'submit'}>Submit</button>
 				</form>
 			</div>
 		</Wrapper>

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { IArticle } from '../models'
+import axios from 'axios'
 
 interface IPostProps {
 	article: IArticle
@@ -17,7 +18,16 @@ const Post: React.FunctionComponent<IPostProps> = ({ article }) => {
 
 	return (
 		<div className={'flex gap-5'}>
-			<img className={'w-[272px] h-[244px]'} src={require('../images/img.jpg')} alt='image' />
+			<img
+				className={'h-[250px]'}
+				// src={`https://loremflickr.com/1000/1000/dog?random=${article.id}`}
+				src={
+					article.imageUrl
+						? article.imageUrl
+						: `https://loremflickr.com/1000/1000/dog?random=${article.id}`
+				}
+				alt='image'
+			/>
 			<div className={'w-[561px] flex flex-col gap-4'}>
 				<h1 className={'text-2xl'}>{article.title}</h1>
 				<div className={'flex gap-4'}>
