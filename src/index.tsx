@@ -1,33 +1,42 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import ReactDOM from 'react-dom/client'
+import React from 'react'
+
+import { Provider } from 'react-redux'
+import { persistor, store } from './app/store'
+
+import ArticleDetailed from './components/molecules/ArticleDetailed'
+import CreateArticlePage from './components/pages/CreateArticlePage'
+import EditArticlePage from './components/pages/EditArticlePage'
+import LoginPage from './components/pages/LoginPage'
+import App from './App'
 
 import './index.css'
-import PostDetailed from './components/PostDetailed'
-import MyArticles from './components/MyArticles'
-import CreateArticlePage from './components/CreateArticlePage'
-import { Provider } from 'react-redux'
-import { store } from './app/store'
-import SinglePage from './components/SinglePage'
+import MyArticlesPage from './components/pages/MyArticlesPage'
+import ErrorPage from './components/pages/ErrorPage'
+import { PersistGate } from 'redux-persist/integration/react'
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <App />
+		element: <App />,
+		errorElement: <ErrorPage />
 	},
 	{
-		path: '/:id',
-		element: <SinglePage />
+		path: '/login',
+		element: <LoginPage />
 	},
 	{
 		path: '/articles/:articleId',
-		element: <PostDetailed />
+		element: <ArticleDetailed />
 	},
-
 	{
 		path: '/myarticles',
-		element: <MyArticles />
+		element: <MyArticlesPage />
+	},
+	{
+		path: '/editarticle/:articleId',
+		element: <EditArticlePage />
 	},
 	{
 		path: '/createarticle',

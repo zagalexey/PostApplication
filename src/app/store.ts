@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
+
 import loginReducer from '../features/login/loginSlice'
 import articleReducer from '../features/article/articleSlice'
 

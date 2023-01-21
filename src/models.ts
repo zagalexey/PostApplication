@@ -1,22 +1,5 @@
-// export interface Articles {
-// 	pagination: Pagination
-// 	items: IArticle[]
-// }
-//
-// export interface Pagination {
-// 	offset: number
-// 	limit: number
-// 	total: number
-// }
-
-export interface commentArgs {
-	articleId: number
-	author: string
-	content: string
-}
-
 export interface IComment {
-	commentId?: string
+	id?: string
 	articleId: number
 	author: string
 	content: string
@@ -29,10 +12,16 @@ export interface IArticle {
 	id: number
 	title: string
 	perex: string
-	imageUrl: null | string
+	imageUrl: string
 	createdAt: string
 	lastUpdatedAt: string
 	content: string
 	author: string
 	comments: Array<IComment>
+}
+
+export interface commentArgs {
+	articleId: number
+	content: string
+	author: string
 }
