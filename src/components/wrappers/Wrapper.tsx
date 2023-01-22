@@ -4,6 +4,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { logout } from '../../features/login/loginSlice'
 
+// import logo from '../../images/icons/logo.svg'
+// import avatar from '../../images/avatars/Avatar.png'
+// import arrowImage from '../../images/icons/arrow.svg'
+
 interface IWrapperProps {
 	children: React.ReactNode
 }
@@ -28,6 +32,7 @@ const Wrapper: FC<IWrapperProps> = ({ children }) => {
 					<div className={'flex items-center gap-[40px]'}>
 						<Link to={'/'}>
 							<img src={require('../../images/icons/logo.svg')} alt='logo' />
+							{/*<img src={logo} alt='logo' />*/}
 						</Link>
 						<li>
 							<Link to={'/'}>Recent Articles</Link>
@@ -48,6 +53,7 @@ const Wrapper: FC<IWrapperProps> = ({ children }) => {
 								<img
 									className={'w-[32px] h-[32px] hover:cursor-pointer'}
 									src={require('../../images/avatars/Avatar.png')}
+									// src={avatar}
 									alt='avatar'
 									onClick={() => setModal((prevState) => !prevState)}
 								/>
@@ -66,6 +72,7 @@ const Wrapper: FC<IWrapperProps> = ({ children }) => {
 							>
 								Log in
 								<img src={require('../../images/icons/arrow.svg')} alt='Arrow' />
+								{/*<img src={arrowImage} alt='Arrow' />*/}
 							</div>
 						)}
 					</li>

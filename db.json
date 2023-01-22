@@ -70,66 +70,12 @@
     },
     {
       "articleId": 2,
-      "author": "Alexey Zagorulko",
+      "author": "Elisabeth Strain",
       "content": "Getting Tired of Cat? 10 Sources of Inspiration That'll Rekindle Your Love",
       "postedAt": "2023-01-14T11:28:11.332Z",
       "image": "Avatar.png",
       "score": -1,
       "id": "RJjQIqI"
-    },
-    {
-      "articleId": 3,
-      "author": "Elisabeth Strain",
-      "content": "test",
-      "postedAt": "2023-01-20T12:21:01.140Z",
-      "image": "Avatar.png",
-      "score": -2,
-      "id": "Bp4hsd-"
-    },
-    {
-      "articleId": 1,
-      "author": "Elisabeth Strain",
-      "content": "test",
-      "postedAt": "2023-01-20T12:38:01.905Z",
-      "image": "Avatar.png",
-      "score": -1,
-      "id": "GnSvV-8"
-    },
-    {
-      "articleId": 3,
-      "author": "Elisabeth Strain",
-      "content": "test",
-      "postedAt": "2023-01-20T13:09:58.976Z",
-      "image": "Avatar.png",
-      "score": 0,
-      "id": "XsosZ5I"
-    },
-    {
-      "articleId": 1,
-      "author": "Elisabeth Strain",
-      "content": "test",
-      "postedAt": "2023-01-21T09:11:50.766Z",
-      "image": "Avatar.png",
-      "score": 0,
-      "id": "HHbRKQU"
-    },
-    {
-      "articleId": 1,
-      "author": "Elisabeth Strain",
-      "content": "hello",
-      "postedAt": "2023-01-21T09:11:55.391Z",
-      "image": "Avatar.png",
-      "score": 0,
-      "id": "ZorQWs8"
-    },
-    {
-      "articleId": 3,
-      "author": "Elisabeth Strain",
-      "content": "test3",
-      "postedAt": "2023-01-21T09:13:58.884Z",
-      "image": "Avatar.png",
-      "score": 0,
-      "id": "7-qzW3Y"
     }
   ],
   "images": []

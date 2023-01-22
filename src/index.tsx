@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import React from 'react'
 
 import { Provider } from 'react-redux'
-import { persistor, store } from './app/store'
+import { store } from './app/store'
 
 import ArticleDetailed from './components/molecules/ArticleDetailed'
 import CreateArticlePage from './components/pages/CreateArticlePage'
@@ -12,11 +12,11 @@ import LoginPage from './components/pages/LoginPage'
 import App from './App'
 
 import './index.css'
+
 import MyArticlesPage from './components/pages/MyArticlesPage'
 import ErrorPage from './components/pages/ErrorPage'
-import { PersistGate } from 'redux-persist/integration/react'
 
-const router = createBrowserRouter([
+export const routes = createBrowserRouter([
 	{
 		path: '/',
 		element: <App />,
@@ -48,7 +48,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<RouterProvider router={router} />
+			<RouterProvider router={routes} />
 		</Provider>
 	</React.StrictMode>
 )

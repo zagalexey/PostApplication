@@ -34,8 +34,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack serve --config src/webpack.config.js",
-    "build": "webpack --config src/webpack.config.js",
+    "start": "webpack serve --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "server": "json-server -w db.json"
   },
@@ -75,6 +75,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@types/uuid": "^9.0.0",
     "babel-loader": "^9.1.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "react-refresh": "^0.14.0",
     "webpack": "^5.75.0",
